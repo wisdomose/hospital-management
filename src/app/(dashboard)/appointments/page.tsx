@@ -25,7 +25,7 @@ export default function NurseDashboardPage() {
   }, []);
 
   return (
-    <main className="py-10 px-6">
+    <main className="py-10">
       <nav className="flex items-center justify-between mb-6">
         <GiHospital className="size-8 text-primary" />
         <Logout />
