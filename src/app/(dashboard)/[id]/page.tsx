@@ -83,7 +83,7 @@ export default function BookingDetails() {
             <p className="text-end">{booking.owner.phoneNo}</p>
             {/* email */}
             <p className="font-medium capitalize">email</p>
-            <p className="text-end">{booking.owner.email}</p>
+            <p className="text-end break-all">{booking.owner.email}</p>
           </div>
           <Doctor
             hide={user?.userId !== booking.owner.userId || results.length > 0}
