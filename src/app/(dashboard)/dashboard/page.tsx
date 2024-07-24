@@ -44,7 +44,7 @@ export default function DashboardPage() {
       {/* book doctors appointment */}
 
       {/* my appointments */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-wrap-reverse gap-10 items-center justify-between mb-6">
         <h1 className="">My appointments</h1>
 
         <div className="flex items-center gap-4">

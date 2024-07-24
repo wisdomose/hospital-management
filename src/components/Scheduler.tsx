@@ -96,9 +96,9 @@ export function BookAppointment({
       <PopoverTrigger asChild>
         <Button>{label}</Button>
       </PopoverTrigger>
-      <PopoverContent align="end" className="w-auto p-6">
+      <PopoverContent align="end" className="w-auto max-w-min p-6">
         <p className="mb-6">Pick a date and time best suitable for you</p>
-        <div className="grid grid-cols-[1fr,174px] w-fit gap-6 mb-10">
+        <div className="grid max-md:grid-rows-2 md:grid-cols-[1fr,174px] w-fit gap-6 mb-10">
           <div className="">
             <Calendar
               mode="single"
@@ -109,7 +109,7 @@ export function BookAppointment({
               toDate={nextMonth}
             />
           </div>
-          <div className="grid grid-rows-[max-content,1fr] border-l pl-6">
+          <div className="grid grid-rows-[max-content,1fr] md:border-l md:pl-6">
             <h1 className="py-4 text-sm">Pick a time slot</h1>
             <div className="overflow-auto relative">
               <div className="absolute left-0 right-0 top-0 bottom-4 flex flex-col gap-4 max-w-fit">
