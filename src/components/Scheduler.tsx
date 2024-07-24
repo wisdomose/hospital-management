@@ -96,7 +96,7 @@ export function BookAppointment({
       <PopoverTrigger asChild>
         <Button>{label}</Button>
       </PopoverTrigger>
-      <PopoverContent align="end" className="w-auto max-w-min p-6">
+      <PopoverContent align="end" className="w-auto max-w-min p-6 max-md:max-h-[60vh] overflow-auto">
         <p className="mb-6">Pick a date and time best suitable for you</p>
         <div className="grid max-md:grid-rows-2 md:grid-cols-[1fr,174px] w-fit gap-6 mb-10">
           <div className="">
