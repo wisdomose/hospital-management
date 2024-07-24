@@ -70,40 +70,42 @@ export default function LabResults({
       <DialogTrigger asChild>
         <Button className="w-fit">Upload lab results</Button>
       </DialogTrigger>
-      <DialogContent className="p-0">
-        <DialogHeader className="p-6 border-b">
-          <DialogTitle>Upload lab results</DialogTitle>
-        </DialogHeader>
+      <DialogContent className="bg-transparent p-0 px-6 border-0">
+        <div className="bg-white">
+          <DialogHeader className="p-6 border-b">
+            <DialogTitle>Upload lab results</DialogTitle>
+          </DialogHeader>
 
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-2 w-full px-6 pb-6 mx-6"
-          >
-            {/* pcv */}
-            <FormField
-              control={form.control}
-              name="pcv"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>PCV</FormLabel>
-                  <FormControl>
-                    <Input placeholder="0" {...field} />
-                  </FormControl>
-                  {form.formState.errors["pcv"]?.message && (
-                    <FormMessage>
-                      {form.formState.errors["pcv"]?.message}
-                    </FormMessage>
-                  )}
-                </FormItem>
-              )}
-            />
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-col gap-2 w-full px-6 pb-6"
+            >
+              {/* pcv */}
+              <FormField
+                control={form.control}
+                name="pcv"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>PCV</FormLabel>
+                    <FormControl>
+                      <Input placeholder="0" {...field} />
+                    </FormControl>
+                    {form.formState.errors["pcv"]?.message && (
+                      <FormMessage>
+                        {form.formState.errors["pcv"]?.message}
+                      </FormMessage>
+                    )}
+                  </FormItem>
+                )}
+              />
 
-            <Button type="submit" disabled={loading} className="mt-4">
-              Upload
-            </Button>
-          </form>
-        </Form>
+              <Button type="submit" disabled={loading} className="mt-4">
+                Upload
+              </Button>
+            </form>
+          </Form>
+        </div>
       </DialogContent>
     </Dialog>
   );

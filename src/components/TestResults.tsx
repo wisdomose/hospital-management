@@ -84,118 +84,120 @@ export default function TestResults({
       <DialogTrigger asChild>
         <Button className="w-fit">Upload result</Button>
       </DialogTrigger>
-      <DialogContent className="p-0 mx-6">
-        <DialogHeader className="p-6 border-b">
-          <DialogTitle>Upload test results</DialogTitle>
-        </DialogHeader>
+      <DialogContent className="bg-transparent p-0 px-6 border-0">
+        <div className="bg-white">
+          <DialogHeader className="p-6 border-b">
+            <DialogTitle>Upload test results</DialogTitle>
+          </DialogHeader>
 
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-2 w-full px-6 pb-6"
-          >
-            {/* temprature */}
-            <FormField
-              control={form.control}
-              name="temprature"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    Temprature (<sup>o</sup>C)
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder="0" {...field} />
-                  </FormControl>
-                  {form.formState.errors["temprature"]?.message && (
-                    <FormMessage>
-                      {form.formState.errors["temprature"]?.message}
-                    </FormMessage>
-                  )}
-                </FormItem>
-              )}
-            />
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-col gap-2 w-full px-6 pb-6"
+            >
+              {/* temprature */}
+              <FormField
+                control={form.control}
+                name="temprature"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      Temprature (<sup>o</sup>C)
+                    </FormLabel>
+                    <FormControl>
+                      <Input placeholder="0" {...field} />
+                    </FormControl>
+                    {form.formState.errors["temprature"]?.message && (
+                      <FormMessage>
+                        {form.formState.errors["temprature"]?.message}
+                      </FormMessage>
+                    )}
+                  </FormItem>
+                )}
+              />
 
-            {/* pulse */}
-            <FormField
-              control={form.control}
-              name="pulse"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Pulse</FormLabel>
-                  <FormControl>
-                    <Input placeholder="0" {...field} />
-                  </FormControl>
-                  {form.formState.errors["pulse"]?.message && (
-                    <FormMessage>
-                      {form.formState.errors["pulse"]?.message}
-                    </FormMessage>
-                  )}
-                </FormItem>
-              )}
-            />
+              {/* pulse */}
+              <FormField
+                control={form.control}
+                name="pulse"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Pulse</FormLabel>
+                    <FormControl>
+                      <Input placeholder="0" {...field} />
+                    </FormControl>
+                    {form.formState.errors["pulse"]?.message && (
+                      <FormMessage>
+                        {form.formState.errors["pulse"]?.message}
+                      </FormMessage>
+                    )}
+                  </FormItem>
+                )}
+              />
 
-            {/* respiration */}
-            <FormField
-              control={form.control}
-              name="respiration"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Respiration</FormLabel>
-                  <FormControl>
-                    <Input placeholder="0" {...field} />
-                  </FormControl>
-                  {form.formState.errors["respiration"]?.message && (
-                    <FormMessage>
-                      {form.formState.errors["respiration"]?.message}
-                    </FormMessage>
-                  )}
-                </FormItem>
-              )}
-            />
+              {/* respiration */}
+              <FormField
+                control={form.control}
+                name="respiration"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Respiration</FormLabel>
+                    <FormControl>
+                      <Input placeholder="0" {...field} />
+                    </FormControl>
+                    {form.formState.errors["respiration"]?.message && (
+                      <FormMessage>
+                        {form.formState.errors["respiration"]?.message}
+                      </FormMessage>
+                    )}
+                  </FormItem>
+                )}
+              />
 
-            {/* bloodPressure */}
-            <FormField
-              control={form.control}
-              name="blood_pressure"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Blood pressure</FormLabel>
-                  <FormControl>
-                    <Input placeholder="0/0" {...field} />
-                  </FormControl>
-                  {form.formState.errors["blood_pressure"]?.message && (
-                    <FormMessage>
-                      {form.formState.errors["blood_pressure"]?.message}
-                    </FormMessage>
-                  )}
-                </FormItem>
-              )}
-            />
+              {/* bloodPressure */}
+              <FormField
+                control={form.control}
+                name="blood_pressure"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Blood pressure</FormLabel>
+                    <FormControl>
+                      <Input placeholder="0/0" {...field} />
+                    </FormControl>
+                    {form.formState.errors["blood_pressure"]?.message && (
+                      <FormMessage>
+                        {form.formState.errors["blood_pressure"]?.message}
+                      </FormMessage>
+                    )}
+                  </FormItem>
+                )}
+              />
 
-            {/* oxygenSaturation */}
-            <FormField
-              control={form.control}
-              name="oxygen_saturation"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Oxygen saturation</FormLabel>
-                  <FormControl>
-                    <Input placeholder="0" {...field} />
-                  </FormControl>
-                  {form.formState.errors["oxygen_saturation"]?.message && (
-                    <FormMessage>
-                      {form.formState.errors["oxygen_saturation"]?.message}
-                    </FormMessage>
-                  )}
-                </FormItem>
-              )}
-            />
+              {/* oxygenSaturation */}
+              <FormField
+                control={form.control}
+                name="oxygen_saturation"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Oxygen saturation</FormLabel>
+                    <FormControl>
+                      <Input placeholder="0" {...field} />
+                    </FormControl>
+                    {form.formState.errors["oxygen_saturation"]?.message && (
+                      <FormMessage>
+                        {form.formState.errors["oxygen_saturation"]?.message}
+                      </FormMessage>
+                    )}
+                  </FormItem>
+                )}
+              />
 
-            <Button type="submit" disabled={loading} className="mt-4">
-              Upload
-            </Button>
-          </form>
-        </Form>
+              <Button type="submit" disabled={loading} className="mt-4">
+                Upload
+              </Button>
+            </form>
+          </Form>
+        </div>
       </DialogContent>
     </Dialog>
   );
