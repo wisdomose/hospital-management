@@ -44,7 +44,7 @@ export default function BookingDetails() {
 
   const results = booking ? (Object.keys(booking.tests ?? {}) as Test[]) : [];
   return (
-    <main className="p-6 max-w-xl mx-auto">
+    <main className="py-6 max-w-xl mx-auto">
       <Button asChild variant={"ghost"}>
         <Link
           href={

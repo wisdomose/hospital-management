@@ -78,7 +78,7 @@ export default function LabResults({
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-2 w-full px-6 pb-6"
+            className="flex flex-col gap-2 w-full px-6 pb-6 mx-6"
           >
             {/* pcv */}
             <FormField

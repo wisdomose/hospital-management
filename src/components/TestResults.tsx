@@ -84,7 +84,7 @@ export default function TestResults({
       <DialogTrigger asChild>
         <Button className="w-fit">Upload result</Button>
       </DialogTrigger>
-      <DialogContent className="p-0">
+      <DialogContent className="p-0 mx-6">
         <DialogHeader className="p-6 border-b">
           <DialogTitle>Upload test results</DialogTitle>
         </DialogHeader>
